@@ -7,7 +7,7 @@ The purposes of this project are
 - easy access to dataset using auto downloading before training
 - expendable to new datasets
 
-- The scripts have been tested on CUDA 11.8 with torch 2.0.
+The scripts have been tested on CUDA 11.8 with torch 2.0.
 
 Datasets listed:
 
