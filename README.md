@@ -1,12 +1,26 @@
-## Torch implementation of FGVC datasets and their baselines
+# Torch Implementation of FGVC Datasets and Baselines
 
-This project implements most famous FGVC datasets with training script using ResNet50.
+This repository provides an implementation of the most renowned FGVC (Fine-Grained Visual Categorization) datasets, complete with a training script using ResNet50. Some datasets, originally unavailable or with altered structures, have been reorganized and are now accessible via Google Drive for automated downloading.
 
-As some of the datasets are not available online or structure has been changed, I reoganized the structure and upload them to google drive for auto downloading.
+The purposes of this project are
+- providing unified interfaces to FGVC datasets
+- easy access to dataset using auto downloading before training
+- expendable to new datasets
 
-I've tested the loading and training scripts on CUDA11.8+torch2.0
+- The scripts have been tested on CUDA 11.8 with torch 2.0.
 
-The following libs are required:
+Datasets listed:
+
+- [FGVC Aircraft](http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/)
+- [Caltech UCSD Birds (CUB-200-2011)](http://www.vision.caltech.edu/visipedia/CUB-200.html)
+- [Stanford Cars](https://ai.stanford.edu/~jkrause/cars/car_dataset.html)
+- [Stanford Dogs](http://vision.stanford.edu/aditya86/ImageNetDogs/)
+- [North American Birds (NABirds)](https://dl.allaboutbirds.org/nabirds)
+- [iNaturalist 2017(Inat2017)](https://github.com/visipedia/inat_comp/tree/master/2017)
+- [TinyImageNet](https://www.kaggle.com/c/tiny-imagenet)
+
+## Prerequisites
+This project is compatible with both Linux and Windows operating systems.
 
 #### Linux & Windows
 ```shell
@@ -23,10 +37,10 @@ Then modify the including in training script, for example, if you want to use St
 ```shell
 from datasets.Dogs import Dogs as FGVC_Dataset
 ```
-and uncomment the rest, then,
+Uncomment this line and comment out the rest.
 
+## Running the Training Script
 #### Linux & Windows
 ```shell
-# Run the training script.
 python model_trainer.py --device cuda:0
 ```
