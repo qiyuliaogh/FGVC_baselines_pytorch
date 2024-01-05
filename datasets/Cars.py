@@ -1,27 +1,9 @@
 import os
-import pandas as pd
-from torchvision.datasets.utils import download_url
-import torch
-import numpy as np
-import scipy.io as sio
 from os.path import join
 from torch.utils.data import Dataset
-from torchvision import transforms
-from torchvision.datasets import VisionDataset
-from torchvision.datasets import ImageFolder
-from torchvision.datasets.folder import default_loader
-from torchvision.datasets.utils import extract_archive, check_integrity, download_url, verify_str_arg, list_dir
-np.random.seed(0)
-from PIL import Image, ImageOps
-import matplotlib.pyplot as plt
+from torchvision.datasets.utils import extract_archive, download_url
 import cv2
-import sys
-import json
-import warnings
-from random import choice
-import random
 from scipy.io import loadmat
-from google_drive_downloader import GoogleDriveDownloader as gdd
 
 class Cars(Dataset):
     def __init__(self, root="./download/", train=True, transform=None, download=True):
