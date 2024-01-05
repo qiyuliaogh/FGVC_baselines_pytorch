@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import cv2
 from torchvision.datasets import VisionDataset
 from torchvision.datasets.folder import default_loader
