@@ -79,7 +79,7 @@ class Cub2011(Dataset):
     def __getitem__(self, idx):
         sample = self.data.iloc[idx]
         path = os.path.join(self.root, self.base_folder, sample.filepath)
-        target = sample.target - 1 + self.label_bias
+        target = sample.target - 1
         img = cv2.imread(path)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = self.transform(image=img)["image"]
