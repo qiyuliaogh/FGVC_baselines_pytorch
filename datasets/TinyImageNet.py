@@ -3,8 +3,7 @@ import numpy as np
 import cv2
 from torchvision.datasets import VisionDataset
 from torchvision.datasets.folder import default_loader
-from torchvision.datasets.utils import extract_archive, check_integrity, download_url, verify_str_arg, list_dir
-np.random.seed(0)
+from torchvision.datasets.utils import extract_archive, check_integrity, download_url, verify_str_arg
 
 def find_classes(class_file):
     with open(class_file) as r:
